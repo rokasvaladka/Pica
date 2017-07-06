@@ -1,17 +1,38 @@
 body, html{
     margin: 0px;
-    height: 100%;
+    height: 90%;
     display: block;
 }
 .pizzaimg {
+    position: relative;
     background-repeat: no-repeat;
     background-size: cover;
     background-image: url("../img/pizza.jpg");
     min-height: 100%;
 }
-.rela {
-    position: relative;
+.white {
+    color: white;
 }
-.abso {
+.center {
+    margin-left: auto;
+    margin-right: auto;
+}
+.display-center {
     position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.black {
+    color: #ffffff;
+    background-color: #000000;
+}
+.button {
+    border: none;
+    display: inline-block;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+.font36 {
+    font-size: 36px;
 }
