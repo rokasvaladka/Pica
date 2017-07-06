@@ -1,0 +1,17 @@
+body, html{
+    margin: 0px;
+    height: 100%;
+    display: block;
+}
+.pizzaimg {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("../img/pizza.jpg");
+    min-height: 100%;
+}
+.rela {
+    position: relative;
+}
+.abso {
+    position: absolute;
+}
