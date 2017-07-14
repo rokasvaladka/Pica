@@ -1,7 +1,14 @@
-body, html{
+* {
+    box-sizing: border-box;
+}
+
+body, html {
     margin: 0px;
     height: 90%;
     display: block;
+}
+header{
+    filter: grayscale(50%);
 }
 .pizzaimg {
     position: relative;
@@ -14,38 +21,132 @@ body, html{
 .center {
     margin-left: auto;
     margin-right: auto;
+    text-align: center;
 }
+
 .display-center {
-    position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
 }
+
 .black {
     color: #ffffff;
     background-color: #000000;
 }
+
 .button {
     border: none;
     display: inline-block;
     padding: 8px 16px;
     text-decoration: none;
 }
-.font36 {
-    font-size: 36px;
+.absolute {
+    position: absolute;
 }
+.col-1 {
+    width: 8.33333%
+}
+
+.col-2 {
+    width: 16.66666%
+}
+
+.col-3 {
+    width: 24.99999%
+}
+
+.col-4 {
+    width: 33.33333%
+}
+
+.col-5 {
+    width: 41.66666%
+}
+
+.col-6 {
+    width: 49.99999%
+}
+
+.col-7 {
+    width: 58.33333%
+}
+
+.col-8 {
+    width: 66.66666%
+}
+
+.col-9 {
+    width: 74.99999%
+}
+
+.col-10 {
+    width: 83.33333%
+}
+
+.col-11 {
+    width: 91.66666%
+}
+
+.col-12 {
+    width: 99.99999%
+}
+
 body, h1, h2, h3, h4, h5, h6 {
     font-family: "Amatic SC", sans-serif;
 }
- @media  only screen and (min-width: 400px) {
+
+@media only screen and (min-width: 321px) {
     div.display-center span {
         color: white;
         font-size: 100px;
     }
 }
-@media  only screen and (max-width: 400px) {
+
+@media only screen and (max-width: 320px) {
     div.display-center span {
         color: white;
-        font-size: 10px;
+        font-size: 60px !important;
     }
+}
+
+@media only screen and (min-width: 321px) {
+    a.black {
+        color: white;
+        font-size: 36px;
+        white-space: nowrap;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    a.black {
+        color: white;
+        font-size: 15px;
+    }
+}
+
+.floatLeft {
+    float: left;
+    left: 0;
+    bottom: 0;
+}
+
+.padding {
+    padding: 8px 16px;
+}
+.bgcblack {
+    background-color: black;
+}
+.margin20 {
+    margin: 20px 20px 20px 20px;
+}
+.paddingAuto {
+    padding: 0px auto 0px auto;
+}
+.headerLine {
+    margin-bottom: 64px;
+    font-size: 64px;
+}
+.font36 {
+    font-size: 36px;
 }
