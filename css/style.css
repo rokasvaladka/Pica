@@ -130,12 +130,17 @@ body, h1, h2, h3, h4, h5, h6 {
     left: 0;
     bottom: 0;
 }
-
-.padding {
-    padding: 8px 16px;
+.floatRight {
+    float: right;
+    left: 0;
+    bottom: 0;
 }
+
 .bgcblack {
     background-color: black;
+}
+.bgcwhite {
+    background-color: white;
 }
 .margin20 {
     margin: 20px 20px 20px 20px;
@@ -143,10 +148,15 @@ body, h1, h2, h3, h4, h5, h6 {
 .paddingAuto {
     padding: 0px auto 0px auto;
 }
-.headerLine {
-    margin-bottom: 64px;
-    font-size: 64px;
+.padding64 {
+    padding-top: 64px;
+    padding-bottom: 64px;
 }
-.font36 {
-    font-size: 36px;
+.clearfix {
+    content: "";
+    display: table;
+    clear: both;
+}
+.marginBottom64 {
+    margin-bottom: 64px;
 }
