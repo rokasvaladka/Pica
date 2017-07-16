@@ -9,6 +9,16 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC">
 </head>
 <body class="col-12">
+<div class="clearfix"></div>
+<div class="topBar">
+    <div style="">
+        <a href="#">HOME</a>
+        <a href="#menu">MENU</a>
+        <a href="#about">ABOUT</a>
+        <a href="#googleMap">CONTACT</a>
+    </div>
+</div>
+<div class="clearfix"></div>
 <header class="pizzaimg">
     <div style="text-align: center" class="center display-center absolute">
         <span>thin<br>CRUST PIZZA</span><br>
@@ -18,78 +28,152 @@
         <a href="#menu" class="button black ">Open from 10am to 12pm</a>
     </div>
 </header>
-<div class="bgcblack col-12 padding64">
+<div class="bgcblack col-12 padding64" id="menu">
     <div class="clearfix"></div>
-    <div pats meniu konteineris>
+    <div class="margin20">
         <h1 class="marginBottom64 center textClrWhite">
             THE MENU
         </h1>
-        <div pasirinkimu meniu>
+        <div style="border: 1px solid white">
             <div class="clearfix"></div>
             <a class="center">
-                <div class="col-4 floatLeft textClrWhite"> Pizza</div>
+                <div class="col-4 floatLeft textClrWhite selection">Pizza</div>
             </a>
             <a class="center">
-                <div class="col-4 floatLeft textClrWhite">SALAD</div>
+                <div class="col-4 floatLeft textClrWhite selection">Salad</div>
             </a>
             <a class="center">
-                <div class="col-4 floatLeft textClrWhite">sadasd</div>
+                <div class="col-4 floatLeft textClrWhite selection">Starter</div>
             </a>
             <div class="clearfix"></div>
         </div>
         <div class="bgcwhite">
-            <!-- clearfixas before -->
-            <h1>
-                <b> pavadinimas</b>
+            <h1 style="margin-top: 0px">
+                <b> Margarita</b>
                 <span class="floatRight">$12.50</span>
             </h1>
             <p>
-                sadsadsadsadsadasdsdasdasdasdasd
+                Fresh tomatoes, fresh mozzarella, fresh basil
             </p>
             <hr>
             <h1>
-                <b> pavadinimas</b>
-                <span class="floatRight">$12.50</span>
+                <b> Formaggio</b>
+                <span class="floatRight">$15.50</span>
             </h1>
             <p>
-                aprasymas dsdadadsadasdasdasdasdsadsadasdaasd
+                Four cheeses (mozzarella, parmesan, pecorino, jarlsberg)
             </p>
             <hr>
             <h1>
-                <b> pavadinimas</b>
-                <span class="floatRight">$12.50</span>
+                <b> Chicken</b>
+                <span class="floatRight">$17.00</span>
             </h1>
             <p>
-                aprasymas dsdadadsadasdasdasdsadasdasdas
+                Fresh tomatoes, mozzarella, chicken, onions
             </p>
             <hr>
             <h1>
-                <b> pavadinimas</b>
-                <span class="floatRight">$12.50</span>
+                <b> Pineapple'o'clock</b>
+                <span class="floatRight">$16.50</span>
             </h1>
             <p>
-                aprasymas dsdadaddsadasdasdasd
+                Fresh tomatoes, mozzarella, fresh pineapple, bacon, fresh basil
             </p>
             <hr>
             <h1>
-                <b> pavadinimas</b>
-                <span class="floatRight">$12.50</span>
+                <b> Meat Town </b><span style="background-color: red; color: white">HOT!</span>
+                <span class="floatRight">$20.00</span>
             </h1>
             <p>
-                aprasymas dsdadadasddddddddddddddddddd
+                Fresh tomatoes, mozzarella, hot pepporoni, hot sausage, beef, chicken
             </p>
             <hr>
             <h1>
-                <b> pavadinimas</b>
-                <span class="floatRight">$12.50</span>
+                <b> Parma </b></b><span style="background-color: gray">NEW</span>
+                <span class="floatRight">$21.50</span>
             </h1>
             <p>
-                aprasymas dsdadaddddddddddddddddddddddddddd
+                Fresh tomatoes, mozzarella, parma, bacon, fresh arugula
             </p>
-            <!-- clearfixas after -->
         </div>
     </div>
     <div class="clearfix"></div>
 </div>
+<div style="background-color: pink; padding: 0px 40px 0px 40px" class="white" id="about">
+    <div style="padding-bottom: 64px">
+        <h1 class="center" style="margin-top: 0px; margin-bottom: 60px; padding-top: 40px">ABOUT</h1>
+        <p style="text-align: left; font-size: 24px!important">The Pizza Restaurant was founded in blabla by Mr.
+            Italiano in lorem ipsum dolor sit amet, consectetur
+            adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <br>
+        <div>
+            <p class="floatLeft" style=" font-size: 24px!important"><b>The Chef?</b>Mr. Italiano himself</p>
+            <img src="img/chef.jpg" class="floatRight" style="margin-left: 20px; border-radius: 50%; width: 150px">
+        </div>
+        <div class="clearfix"></div>
+        <br>
+        <br>
+        <p>We are proud of our interiors.</p>
+    </div>
+    <img src="img/bar.jpg" style="padding: 0px 20px 0px 20px" class="col-12">
+    <h1>Opening Hours</h1>
+    <div style="width: 100%; display: inline-block">
+        <p class="floatLeft col-5">
+            Mon & Tue CLOSED
+            <br>
+            Wednesday 10.00 - 24.00
+            <br>
+            Thursday 10:00 - 24:00
+        </p>
+        <p class="floatLeft col-5">
+            Friday 10:00 - 12:00
+            <br>
+            Saturday 10:00 - 23:00
+            <br>
+            Sunday Closed
+        </p>
+    </div>
+</div>
+<div id="googleMap">
+    <div id="map"></div>
+</div>
+<script>
+    function initMap() {
+        var uluru = {lat: 41.878110, lng: -87.632785};
+        var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 12,
+            center: uluru
+        });
+        var marker = new google.maps.Marker({
+            position: uluru,
+            map: map
+        });
+    }
+</script>
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD3qp_0GxVevRC9JsysIhmek7bGxHPhPDU&callback=initMap">
+</script>
+<div id="contacts" class="col-12" style="display: inline-block; text-align: left">
+    <h1 class="center">Contact</h1>
+    <p class="margin24">Find us at some address at some place or call us at 05050515-122330</p>
+    <p class="margin24"><span style="background-color: black; color: white;">FYI!</span>We offer full-service catering
+        for any event, large or small. We understand your needs and we will cater the food
+        to satisfy the biggerst criteria of them all, both look and taste.</p>
+    <p class="margin24">Reserve a table, ask for today's special or just send us a message:</p>
+    <form class="col-12">
+        <input class="margin24" type="text" placeholder="Name"><br>
+        <input class="margin24" type="number" placeholder="How many people" required><br>
+        <input class="margin24" type="datetime-local" placeholder="Date and time" value="2017-11-16T20:00" required><br>
+        <input class="margin24" type="text" placeholder="Message \ Special requirements" required><br>
+        <button class="col-12 center margin24" type="submit">SEND MESSAGE</button>
+    </form>
+</div>
+<footer style="background-color: black">
+    <h1 style="padding: 40px 0px 40px 0px" class="center white">
+        Powered by <span style="border-bottom: 1px solid white">w3.css</span>
+    </h1>
+</footer>
+
 </body>
 </html>
