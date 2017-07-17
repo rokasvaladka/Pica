@@ -10,12 +10,12 @@
 </head>
 <body class="col-12">
 <div class="clearfix"></div>
-<div class="topBar">
+<div class="topBar font24 black">
     <div style="">
-        <a href="#">HOME</a>
-        <a href="#menu">MENU</a>
-        <a href="#about">ABOUT</a>
-        <a href="#googleMap">CONTACT</a>
+        <a href="#" class="textClrWhite">HOME</a>
+        <a href="#menu" class="textClrWhite">MENU</a>
+        <a href="#about" class="textClrWhite">ABOUT</a>
+        <a href="#googleMap" class="textClrWhite">CONTACT</a>
     </div>
 </div>
 <div class="clearfix"></div>
@@ -25,30 +25,30 @@
         <a href="#menu" class="button black">Let me see the menu</a>
     </div>
     <div class=" floatLeft padding absolute">
-        <a href="#menu" class="button black ">Open from 10am to 12pm</a>
+        <span class="black font24">Open from 10am to 12pm</span>
     </div>
 </header>
 <div class="bgcblack col-12 padding64" id="menu">
     <div class="clearfix"></div>
-    <div class="margin20">
+    <div style="margin: auto; max-width: 980px" class="padding5">
         <h1 class="marginBottom64 center textClrWhite">
             THE MENU
         </h1>
         <div style="border: 1px solid white">
             <div class="clearfix"></div>
-            <a class="center">
-                <div class="col-4 floatLeft textClrWhite selection">Pizza</div>
+            <a class="center" onclick="toggleVisibility('Pizza');">
+                <div class="col-4 floatLeft textClrWhite selection" tabindex="1">Pizza</div>
             </a>
-            <a class="center">
-                <div class="col-4 floatLeft textClrWhite selection">Salad</div>
+            <a class="center" onclick="toggleVisibility('Salad');">
+                <div class="col-4 floatLeft textClrWhite selection" tabindex="1">Salad</div>
             </a>
-            <a class="center">
-                <div class="col-4 floatLeft textClrWhite selection">Starter</div>
+            <a class="center"  onclick="toggleVisibility('Starter');">
+                <div class="col-4 floatLeft textClrWhite selection" tabindex="1">Starter</div>
             </a>
             <div class="clearfix"></div>
         </div>
-        <div class="bgcwhite">
-            <h1 style="margin-top: 0px">
+        <div class="bgcwhite" id="Pizza">
+            <h1 class="noMargin">
                 <b> Margarita</b>
                 <span class="floatRight">$12.50</span>
             </h1>
@@ -96,12 +96,109 @@
                 Fresh tomatoes, mozzarella, parma, bacon, fresh arugula
             </p>
         </div>
+        <div class="bgcwhite" id="Salad" style="display: none">
+            <h1 class="noMargin">
+                <b> Lasagna <span style="background-color: gray">Popular</span></b>
+                <span class="floatRight">$13:50</span>
+            </h1>
+            <p>
+                Special sauce, mozzarella, parmesan, ground beef
+            </p>
+            <hr>
+            <h1>
+                <b> Ravioli</b>
+                <span class="floatRight">$14:50</span>
+            </h1>
+            <p>
+                Ravioli filled with cheese
+            </p>
+            <hr>
+            <h1>
+                <b> Spaghetti Classica</b>
+                <span class="floatRight">$11:00</span>
+            </h1>
+            <p>
+                Fresh tomatoes, onions, ground beef
+            </p>
+            <hr>
+            <h1>
+                <b> Seafood pasta</b>
+                <span class="floatRight">$25:50</span>
+            </h1>
+            <p>
+                Salmon, shrimp, lobster, garlic
+            </p>
+        </div>
+        <div class="bgcwhite" id="Starter" style="display: none">
+            <h1 class="noMargin">
+                <b> Today's Soup <span style="background-color: gray">Seasonal</span></b>
+                <span class="floatRight">$5:50</span>
+            </h1>
+            <p>
+                Ask the waiter
+            </p>
+            <hr>
+            <h1>
+                <b> Bruschetta</b>
+                <span class="floatRight">$8:50</span>
+            </h1>
+            <p>
+                Bread with pesto, tomatoes, onion, garlic
+            </p>
+            <hr>
+            <h1>
+                <b> Garlic bread</b>
+                <span class="floatRight">$9:50</span>
+            </h1>
+            <p>
+                Grilled ciabatta, garlic butter, onions
+            </p>
+            <hr>
+            <h1>
+                <b> Tomozzarella</b>
+                <span class="floatRight">$10:50</span>
+            </h1>
+            <p>
+                Tomatoes and mozzarella
+            </p>
+        </div>
+        <script>
+            var divs = ["Pizza", "Salad", "Starter"];
+            var visibleDivId = null;
+            function toggleVisibility(divId) {
+                if(visibleDivId === divId) {
+                    //visibleDivId = null;
+                } else {
+                    visibleDivId = divId;
+                }
+                hideNonVisibleDivs();
+            }
+            function hideNonVisibleDivs() {
+                var i, divId, div;
+                for(i = 0; i < divs.length; i++) {
+                    divId = divs[i];
+                    div = document.getElementById(divId);
+                    if(visibleDivId === divId) {
+                        div.style.display = "block";
+                    } else {
+                        div.style.display = "none";
+                    }
+                }
+            }
+            window.onload = function(){
+                var arr = document.querySelectorAll(".selection");
+                for(var i=0;i<arr.length;i++){
+                    arr[i].style.background = bgcolorlist[Math.floor(Math.random()*bgcolorlist.length)]
+                }
+            }
+        </script>
     </div>
     <div class="clearfix"></div>
 </div>
-<div style="background-color: pink; padding: 0px 40px 0px 40px" class="white" id="about">
+<div style="background-color: pink" class="white padding5" id="about">
+    <div style="max-width: 980px; margin: auto">
     <div style="padding-bottom: 64px">
-        <h1 class="center" style="margin-top: 0px; margin-bottom: 60px; padding-top: 40px">ABOUT</h1>
+        <h1 class="center noMargin" style="margin-bottom: 60px; padding-top: 40px">ABOUT</h1>
         <p style="text-align: left; font-size: 24px!important">The Pizza Restaurant was founded in blabla by Mr.
             Italiano in lorem ipsum dolor sit amet, consectetur
             adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -109,14 +206,14 @@
         <br>
         <div>
             <p class="floatLeft" style=" font-size: 24px!important"><b>The Chef?</b>Mr. Italiano himself</p>
-            <img src="img/chef.jpg" class="floatRight" style="margin-left: 20px; border-radius: 50%; width: 150px">
+            <img src="img/chef.jpg" class="floatRight" style="margin-right: 20px; border-radius: 50%; width: 150px">
         </div>
         <div class="clearfix"></div>
         <br>
         <br>
         <p>We are proud of our interiors.</p>
     </div>
-    <img src="img/bar.jpg" style="padding: 0px 20px 0px 20px" class="col-12">
+    <img src="img/bar.jpg" class="col-12">
     <h1>Opening Hours</h1>
     <div style="width: 100%; display: inline-block">
         <p class="floatLeft col-5">
@@ -134,6 +231,7 @@
             Sunday Closed
         </p>
     </div>
+    </div>
 </div>
 <div id="googleMap">
     <div id="map"></div>
@@ -143,7 +241,8 @@
         var uluru = {lat: 41.878110, lng: -87.632785};
         var map = new google.maps.Map(document.getElementById('map'), {
             zoom: 12,
-            center: uluru
+            center: uluru,
+            scrollwheel: false
         });
         var marker = new google.maps.Marker({
             position: uluru,
@@ -154,7 +253,8 @@
 <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD3qp_0GxVevRC9JsysIhmek7bGxHPhPDU&callback=initMap">
 </script>
-<div id="contacts" class="col-12" style="display: inline-block; text-align: left">
+<div id="contacts" class="col-12 padding5" style="display: inline-block; text-align: left">
+    <div style="max-width: 980px; margin: auto;">
     <h1 class="center">Contact</h1>
     <p class="margin24">Find us at some address at some place or call us at 05050515-122330</p>
     <p class="margin24"><span style="background-color: black; color: white;">FYI!</span>We offer full-service catering
@@ -168,12 +268,12 @@
         <input class="margin24" type="text" placeholder="Message \ Special requirements" required><br>
         <button class="col-12 center margin24" type="submit">SEND MESSAGE</button>
     </form>
+    </div>
 </div>
 <footer style="background-color: black">
-    <h1 style="padding: 40px 0px 40px 0px" class="center white">
+    <h1 style="padding:40px 0px 40px 0px" class="center white noMargin">
         Powered by <span style="border-bottom: 1px solid white">w3.css</span>
     </h1>
 </footer>
-
 </body>
 </html>

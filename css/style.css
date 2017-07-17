@@ -92,7 +92,7 @@ header, #map {
     width: 99.99999%
 }
 
-body, h1, h2, h3, h4, h5, h6 {
+body, h1, h2, h3, h4, h5, h6, input, button {
     font-family: "Amatic SC", sans-serif;
 }
 
@@ -170,9 +170,6 @@ body, h1, h2, h3, h4, h5, h6 {
 .selection:hover {
     background-color: red;
 }
-p, h1 {
-    margin: 0px 20px 0px 20px;
-}
 h1 {
     font-size: 36px;
 }
@@ -202,4 +199,41 @@ button {
     position: fixed;
     width: 100%;
     z-index: 99999;
+}
+div.margin20 {
+    max-width: 980px;
+}
+h1+b {
+    margin-bottom: 10px;
+   }
+div .selection:focus {
+    background-color:red;
+    border: none;
+}
+@media (max-width: 600px) {
+    .topBar {
+        display: none;
+    }
+}
+div.topBar {
+    opacity: 0.5;
+}
+div.topBar:hover {
+    opacity: 1;
+}
+.font24 {
+    font-size: 24px;
+}
+a.textClrWhite {
+    text-decoration: none;
+}
+a.textClrWhite:hover {
+    background-color: gray;
+    color: black;
+}
+.padding5 {
+    padding: 0px 5px 0px 5px;
+}
+.noMargin {
+    margin-top: 0px
 }
