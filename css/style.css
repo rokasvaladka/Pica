@@ -23,6 +23,9 @@ header, #map {
     margin-right: auto;
     text-align: center;
 }
+.textLeft {
+    text-align: left;
+}
 
 .display-center {
     top: 50%;
@@ -34,10 +37,11 @@ header, #map {
     color: #ffffff;
     background-color: #000000;
 }
-
+.inlineBlock {
+    display: inline-block;
+}
 .button {
     border: none;
-    display: inline-block;
     padding: 8px 16px;
     text-decoration: none;
 }
@@ -107,6 +111,7 @@ body, h1, h2, h3, h4, h5, h6, input, button {
     div.display-center span {
         color: white;
         font-size: 60px !important;
+        font-weight: bold;
     }
 }
 
@@ -127,13 +132,14 @@ body, h1, h2, h3, h4, h5, h6, input, button {
 
 .floatLeft {
     float: left;
-    left: 0;
-    bottom: 0;
 }
 .floatRight {
     float: right;
+}
+.bottomLeft {
     left: 0;
     bottom: 0;
+    padding: 8px 16px;
 }
 
 .bgcblack {
@@ -141,6 +147,9 @@ body, h1, h2, h3, h4, h5, h6, input, button {
 }
 .bgcwhite {
     background-color: white;
+}
+.bgcGray {
+    background-color: gray;
 }
 .margin20 {
     margin: 20px 20px 20px 20px;
@@ -169,6 +178,7 @@ body, h1, h2, h3, h4, h5, h6, input, button {
 }
 .selection:hover {
     background-color: red;
+    cursor: pointer;
 }
 h1 {
     font-size: 36px;
@@ -206,10 +216,6 @@ div.margin20 {
 h1+b {
     margin-bottom: 10px;
    }
-div .selection:focus {
-    background-color:red;
-    border: none;
-}
 @media (max-width: 600px) {
     .topBar {
         display: none;
@@ -220,9 +226,6 @@ div.topBar {
 }
 div.topBar:hover {
     opacity: 1;
-}
-.font24 {
-    font-size: 24px;
 }
 a.textClrWhite {
     text-decoration: none;
@@ -236,4 +239,19 @@ a.textClrWhite:hover {
 }
 .noMargin {
     margin-top: 0px
+}
+.selected {
+    background-color: red;
+    border: none;
+    outline: 0;
+ }
+.fontLarge {
+    font-size: 24px!important;
+}
+.fontXLarge {
+    font-size: 36px!important;
+}
+.auto980 {
+    max-width: 980px;
+    margin: auto;
 }

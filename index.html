@@ -10,7 +10,7 @@
 </head>
 <body class="col-12">
 <div class="clearfix"></div>
-<div class="topBar font24 black">
+<div class="topBar fontLarge black">
     <div style="">
         <a href="#" class="textClrWhite">HOME</a>
         <a href="#menu" class="textClrWhite">MENU</a>
@@ -20,34 +20,34 @@
 </div>
 <div class="clearfix"></div>
 <header class="pizzaimg">
-    <div style="text-align: center" class="center display-center absolute">
-        <span>thin<br>CRUST PIZZA</span><br>
-        <a href="#menu" class="button black">Let me see the menu</a>
+    <div style="min-width: 300px" class="center display-center absolute">
+        <span style="width: 300px">thin<br>CRUST PIZZA</span><br>
+        <a href="#menu" class="button black inlineBlock">Let me see the menu</a>
     </div>
-    <div class=" floatLeft padding absolute">
-        <span class="black font24">Open from 10am to 12pm</span>
+    <div class=" floatLeft absolute bottomLeft">
+        <span class="black fontLarge">Open from 10am to 12pm</span>
     </div>
 </header>
 <div class="bgcblack col-12 padding64" id="menu">
     <div class="clearfix"></div>
-    <div style="margin: auto; max-width: 980px" class="padding5">
+    <div class="padding5 auto980">
         <h1 class="marginBottom64 center textClrWhite">
             THE MENU
         </h1>
         <div style="border: 1px solid white">
             <div class="clearfix"></div>
             <a class="center" onclick="toggleVisibility('Pizza');">
-                <div class="col-4 floatLeft textClrWhite selection" tabindex="1">Pizza</div>
+                <div class="col-4 floatLeft textClrWhite selection selected" id="linkPizza" tabindex="1">Pizza</div>
             </a>
             <a class="center" onclick="toggleVisibility('Salad');">
-                <div class="col-4 floatLeft textClrWhite selection" tabindex="1">Salad</div>
+                <div class="col-4 floatLeft textClrWhite selection" id="linkSalad" tabindex="1">Salad</div>
             </a>
             <a class="center"  onclick="toggleVisibility('Starter');">
-                <div class="col-4 floatLeft textClrWhite selection" tabindex="1">Starter</div>
+                <div class="col-4 floatLeft textClrWhite selection" id="linkStarter" tabindex="1">Starter</div>
             </a>
             <div class="clearfix"></div>
         </div>
-        <div class="bgcwhite" id="Pizza">
+        <div class="bgcwhite fontXLarge" id="Pizza">
             <h1 class="noMargin">
                 <b> Margarita</b>
                 <span class="floatRight">$12.50</span>
@@ -81,7 +81,7 @@
             </p>
             <hr>
             <h1>
-                <b> Meat Town </b><span style="background-color: red; color: white">HOT!</span>
+                <b> Meat Town </b><span class="selected textClrWhite">HOT!</span>
                 <span class="floatRight">$20.00</span>
             </h1>
             <p>
@@ -89,16 +89,16 @@
             </p>
             <hr>
             <h1>
-                <b> Parma </b></b><span style="background-color: gray">NEW</span>
+                <b> Parma </b><span class="bgcGray">NEW</span>
                 <span class="floatRight">$21.50</span>
             </h1>
             <p>
                 Fresh tomatoes, mozzarella, parma, bacon, fresh arugula
             </p>
         </div>
-        <div class="bgcwhite" id="Salad" style="display: none">
+        <div class="bgcwhite fontXLarge" id="Salad" style="display: none">
             <h1 class="noMargin">
-                <b> Lasagna <span style="background-color: gray">Popular</span></b>
+                <b> Lasagna <span class="bgcGray">Popular</span></b>
                 <span class="floatRight">$13:50</span>
             </h1>
             <p>
@@ -129,9 +129,9 @@
                 Salmon, shrimp, lobster, garlic
             </p>
         </div>
-        <div class="bgcwhite" id="Starter" style="display: none">
+        <div class="bgcwhite fontXLarge" id="Starter" style="display: none">
             <h1 class="noMargin">
-                <b> Today's Soup <span style="background-color: gray">Seasonal</span></b>
+                <b> Today's Soup <span class="bgcGray">Seasonal</span></b>
                 <span class="floatRight">$5:50</span>
             </h1>
             <p>
@@ -165,6 +165,7 @@
         <script>
             var divs = ["Pizza", "Salad", "Starter"];
             var visibleDivId = null;
+
             function toggleVisibility(divId) {
                 if(visibleDivId === divId) {
                     //visibleDivId = null;
@@ -180,42 +181,38 @@
                     div = document.getElementById(divId);
                     if(visibleDivId === divId) {
                         div.style.display = "block";
+                        document.getElementById("link" + divId).classList.add("selected");
                     } else {
                         div.style.display = "none";
+                        document.getElementById("link" + divId).classList.remove("selected");
                     }
-                }
-            }
-            window.onload = function(){
-                var arr = document.querySelectorAll(".selection");
-                for(var i=0;i<arr.length;i++){
-                    arr[i].style.background = bgcolorlist[Math.floor(Math.random()*bgcolorlist.length)]
                 }
             }
         </script>
     </div>
     <div class="clearfix"></div>
 </div>
-<div style="background-color: pink" class="white padding5" id="about">
-    <div style="max-width: 980px; margin: auto">
+<div style="background-color: pink" class="white padding5 fontLarge" id="about">
+    <div class="auto980">
     <div style="padding-bottom: 64px">
         <h1 class="center noMargin" style="margin-bottom: 60px; padding-top: 40px">ABOUT</h1>
-        <p style="text-align: left; font-size: 24px!important">The Pizza Restaurant was founded in blabla by Mr.
+        <p class="fontLarge textLeft">The Pizza Restaurant was founded in blabla by Mr.
             Italiano in lorem ipsum dolor sit amet, consectetur
             adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
             quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         <br>
         <div>
-            <p class="floatLeft" style=" font-size: 24px!important"><b>The Chef?</b>Mr. Italiano himself</p>
-            <img src="img/chef.jpg" class="floatRight" style="margin-right: 20px; border-radius: 50%; width: 150px">
+            <p>
+                <strong>The Chef?</strong>
+                Mr. Italiano himself
+                <img src="img/chef.jpg" class="floatRight" style="margin-right: 20px; border-radius: 50%; width: 150px">
+            </p>
         </div>
-        <div class="clearfix"></div>
-        <br>
-        <br>
         <p>We are proud of our interiors.</p>
     </div>
     <img src="img/bar.jpg" class="col-12">
     <h1>Opening Hours</h1>
-    <div style="width: 100%; display: inline-block">
+    <div style="width: 100%" class="inlineBlock">
         <p class="floatLeft col-5">
             Mon & Tue CLOSED
             <br>
@@ -253,14 +250,14 @@
 <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD3qp_0GxVevRC9JsysIhmek7bGxHPhPDU&callback=initMap">
 </script>
-<div id="contacts" class="col-12 padding5" style="display: inline-block; text-align: left">
-    <div style="max-width: 980px; margin: auto;">
+<div id="contacts" class="col-12 padding5 fontLarge textLeft inlineBlock">
+    <div class="auto980">
     <h1 class="center">Contact</h1>
     <p class="margin24">Find us at some address at some place or call us at 05050515-122330</p>
-    <p class="margin24"><span style="background-color: black; color: white;">FYI!</span>We offer full-service catering
+    <p class="margin24"><span class="black">FYI!</span>We offer full-service catering
         for any event, large or small. We understand your needs and we will cater the food
         to satisfy the biggerst criteria of them all, both look and taste.</p>
-    <p class="margin24">Reserve a table, ask for today's special or just send us a message:</p>
+        <p class="margin24"><strong>Reserve</strong> a table, ask for today's special or just send us a message:</p>
     <form class="col-12">
         <input class="margin24" type="text" placeholder="Name"><br>
         <input class="margin24" type="number" placeholder="How many people" required><br>
@@ -270,7 +267,7 @@
     </form>
     </div>
 </div>
-<footer style="background-color: black">
+<footer class="bgcblack">
     <h1 style="padding:40px 0px 40px 0px" class="center white noMargin">
         Powered by <span style="border-bottom: 1px solid white">w3.css</span>
     </h1>
