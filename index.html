@@ -162,33 +162,6 @@
                 Tomatoes and mozzarella
             </p>
         </div>
-        <script>
-            var divs = ["Pizza", "Salad", "Starter"];
-            var visibleDivId = null;
-
-            function toggleVisibility(divId) {
-                if(visibleDivId === divId) {
-                    //visibleDivId = null;
-                } else {
-                    visibleDivId = divId;
-                }
-                hideNonVisibleDivs();
-            }
-            function hideNonVisibleDivs() {
-                var i, divId, div;
-                for(i = 0; i < divs.length; i++) {
-                    divId = divs[i];
-                    div = document.getElementById(divId);
-                    if(visibleDivId === divId) {
-                        div.style.display = "block";
-                        document.getElementById("link" + divId).classList.add("selected");
-                    } else {
-                        div.style.display = "none";
-                        document.getElementById("link" + divId).classList.remove("selected");
-                    }
-                }
-            }
-        </script>
     </div>
     <div class="clearfix"></div>
 </div>
@@ -233,23 +206,6 @@
 <div id="googleMap">
     <div id="map"></div>
 </div>
-<script>
-    function initMap() {
-        var uluru = {lat: 41.878110, lng: -87.632785};
-        var map = new google.maps.Map(document.getElementById('map'), {
-            zoom: 12,
-            center: uluru,
-            scrollwheel: false
-        });
-        var marker = new google.maps.Marker({
-            position: uluru,
-            map: map
-        });
-    }
-</script>
-<script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD3qp_0GxVevRC9JsysIhmek7bGxHPhPDU&callback=initMap">
-</script>
 <div id="contacts" class="col-12 padding5 fontLarge textLeft inlineBlock">
     <div class="auto980">
     <h1 class="center">Contact</h1>
@@ -272,5 +228,9 @@
         Powered by <span style="border-bottom: 1px solid white">w3.css</span>
     </h1>
 </footer>
+<script src="javascript/script.js"></script>
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD3qp_0GxVevRC9JsysIhmek7bGxHPhPDU&callback=initMap">
+</script>
 </body>
 </html>

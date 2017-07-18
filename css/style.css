@@ -180,6 +180,9 @@ body, h1, h2, h3, h4, h5, h6, input, button {
     background-color: red;
     cursor: pointer;
 }
+.selection:active {
+    outline: 0;
+}
 h1 {
     font-size: 36px;
 }
