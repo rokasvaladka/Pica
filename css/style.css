@@ -258,3 +258,21 @@ a.textClrWhite:hover {
     max-width: 980px;
     margin: auto;
 }
+.displayNone {
+    display: none;
+}
+#about {
+    background-color: pink;
+}
+img.floatRight {
+    margin-right: 20px;
+    border-radius: 50%;
+    width: 150px
+}
+h1.white {
+    padding:40px 0px 40px 0px;
+    margin-bottom: 0px;
+}
+h1.white>span {
+    border-bottom: 2px solid white;
+}

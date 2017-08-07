@@ -6,7 +6,6 @@ var visibleDivId = null;
 
 function toggleVisibility(divId) {
     if(visibleDivId === divId) {
-        //visibleDivId = null;
     } else {
         visibleDivId = divId;
     }
